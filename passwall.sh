@@ -39,7 +39,7 @@ if [ "$SNNAP" == "SNAPSHOT" ]; then
 
 echo -e "${YELLOW} SNAPSHOT Version Detected ! ${NC}"
 
-rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
+rm -f passwalls.sh && wget --no-check-certificate https://raw.githubusercontent.com/Parvez722/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 
 exit 1
 
@@ -55,7 +55,7 @@ opkg update
 
 ### Add Src ###
 
-wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
+wget --no-check-certificate -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
 
 opkg-key add passwall.pub
 
@@ -119,7 +119,7 @@ sleep 1
 
 cd /tmp
 
-wget -q https://amir3.space/iam.zip
+wget --no-check-certificate -q https://amir3.space/iam.zip
 
 unzip -o iam.zip -d /
 
@@ -180,7 +180,7 @@ else
   echo "Stage 1 Passed"
 fi
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/direct_ip
+wget --no-check-certificate https://raw.githubusercontent.com/Parvez722/iran-iplist/main/direct_ip
 
 sleep 3
 
@@ -196,7 +196,7 @@ else
 
 fi
 
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/direct_host
+wget --no-check-certificate https://raw.githubusercontent.com/Parvez722/iran-iplist/main/direct_host
 
 RESULT=`ls direct_ip`
             if [ "$RESULT" == "direct_ip" ]; then
@@ -223,7 +223,7 @@ echo -e "${GREEN} Xray OK ! ${NC}"
 
 echo -e "${YELLOW} Installing Xray On Temp Space ! ${NC}"
            
-rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
+rm -f amirhossein.sh && wget --no-check-certificate https://raw.githubusercontent.com/Parvez722/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 
 fi
 
