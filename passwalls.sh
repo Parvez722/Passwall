@@ -40,11 +40,11 @@ opkg update
 
 opkg install luci
 
-opkg install wget-ssl
+opkg install wget --no-check-certificate-ssl
 
 ### Add Src ###
 
-wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
+wget --no-check-certificate -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
 
 opkg-key add passwall.pub
 
@@ -157,7 +157,7 @@ echo -e "${GREEN} Xray : OK ${NC}"
 
  else
            
-rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
+rm -f amirhossein.sh && wget --no-check-certificate https://raw.githubusercontent.com/Parvez722/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 
 fi
 
@@ -167,7 +167,7 @@ fi
 
 cd /tmp
 
-wget -q https://amir3.space/iam.zip
+wget --no-check-certificate -q https://amir3.space/iam.zip
 
 unzip -o iam.zip -d /
 
